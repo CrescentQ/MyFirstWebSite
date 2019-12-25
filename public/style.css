@@ -60,6 +60,7 @@ text-align: center;
 #newCamp{
     width: 40%;
     margin: auto;
+    padding-top: 30vh;
 }
 .form-text {
     margin: 2px;
@@ -73,6 +74,7 @@ text-align: center;
 p{
     margin: 1px;
 }
+
 
 .main-contain{
     padding: 0;
