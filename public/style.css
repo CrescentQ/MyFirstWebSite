@@ -69,22 +69,26 @@ text-align: center;
     width: 100%;
     box-sizing: border-box;
      }
-
-
 p{
     margin: 1px;
 }
 @media only screen and (max-width: 600px) {
+
     #newCamp{
         width: 80%;
         margin: auto;
         padding-top: 20vh;
     }
+    #allCamp{
+        width: 1000%;
+        margin: 10px auto;
+        margin-bottom: 20px;
+        padding: 2px 2px;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        
+        }
     
   }
 
-
-.main-contain{
-    padding: 0;
-    margin: 0;
-}
