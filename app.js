@@ -16,8 +16,8 @@ var indexRoutes = require("./routes/index");
 
 mongoose.Promise = global.Promise;
 
-var url = process.env.DATABASE_URI || "mongodb://localhost:27017/myDB";
-//var url = 
+//var url = process.env.DATABASE_URI || "mongodb://localhost:27017/myDB";
+var url ="mongodb+srv://IvarTheBoneLess:Toiditimtoi123.,.@ivardb-16rcr.mongodb.net/test?retryWrites=true&w=majority";
 //mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true,useUnifiedTopology: true});
 mongoose.connect(url ,{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex: true}); 
 
