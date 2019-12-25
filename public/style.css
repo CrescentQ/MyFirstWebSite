@@ -3,6 +3,7 @@ body{
     padding-top:20px ;
     margin: 0;
     box-sizing: border-box;
+    min-width: 500px;
 }
 
 .jumbotron{
