@@ -76,14 +76,11 @@ p{
 }
 @media only screen and (max-width: 600px) {
     #newCamp{
-        width: 100%;
+        width: 80%;
         margin: auto;
         padding-top: 20vh;
     }
-    *{
-        padding:0;
-        margin: 0;
-    }
+    
   }
 
 
