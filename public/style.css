@@ -58,9 +58,12 @@ text-align: center;
 }
 
 #newCamp{
-    width: 40%;
+    width: 50%;
     margin: auto;
-    padding-top: 30vh;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .form-text {
     margin: 2px;
@@ -76,12 +79,7 @@ p{
 
     #newCamp{
         width: 80%;
-        margin: auto;
-        position: absolute;
-        top:50%;
-        left: 50%;
-        transform: translate(-50,-50);
-    }
+            }
     #allCamp{
         width: 90%;
         margin:auto;
