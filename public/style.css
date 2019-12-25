@@ -1,0 +1,77 @@
+body{
+    background: white;    
+    padding-top:20px ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.jumbotron{
+font-weight: 500;
+border-radius: 20px;
+width: 70%;
+margin: 80px auto;
+margin-bottom: 20px;
+padding: 30px 50px;
+}
+.jumbotron a{
+    margin-top: 20px;
+}
+ul{
+    list-style-type: none;
+}
+ul.listInfo a{
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 6px;
+    text-decoration: none;
+}
+
+ul.listInfo a:hover{
+    background: pink;
+}ul.nav{
+    background: rgb(253, 253, 237) ;
+    padding: 5px;
+    color: red;
+    top: 0px;
+    z-index: 2;
+    
+}
+#navbarr{
+    margin:50px;
+}
+
+#allCamp{
+width: 70%;
+margin: 10px auto;
+margin-bottom: 20px;
+padding: 10px 10px;
+box-sizing: border-box;
+justify-content: center;
+text-align: center;
+
+}
+.card{
+    height: auto;
+    margin-top: 20px;
+}
+
+#newCamp{
+    width: 40%;
+    margin: auto;
+}
+.form-text {
+    margin: 2px;
+}
+.showCamp{
+    width: 100%;
+    box-sizing: border-box;
+     }
+
+     #showContent{
+         margin-right: 40px;
+     }
+
+p{
+    margin: 1px;
+}

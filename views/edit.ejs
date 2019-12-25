@@ -1,0 +1,30 @@
+
+
+
+<%- include('partials/header')%>
+
+<div class="container-fluid" id="newCamp">
+
+    <form action="/campgrounds/<%= editCamp._id %>?_method=PUT" method="POST">
+    <div class="form-group">
+    <small  class="form-text text-muted">Name of the post </small>
+      <input type="text" class="form-control" name = "name" value="<%= editCamp.name %>" >
+      <div class="form-group">
+        <small  class="form-text text-muted">How much per night? </small>
+      <input type="number" class="form-control" name = "price" value="<%= editCamp.price %>" min="0.01" step="0.01">
+    </div>
+    </div>
+    <div class="form-group">
+        <small  class="form-text text-muted">Please Insert Full Url </small>
+      <input type="text" class="form-control" name = "image" value="<%= editCamp.image %>" >
+    </div>
+    <div class="form-group">
+        <small  class="form-text text-muted">Give me some discription here </small>
+        <textarea name = "desc" class="form-control" style="min-height:200px ;"><%= editCamp.desc %></textarea>
+     
+    </div>
+    <input type="submit" class="btn btn-primary btn-block" style="width: 30%; margin:auto"  value="Create">
+  </form>
+
+
+<%- include('partials/footer')%>

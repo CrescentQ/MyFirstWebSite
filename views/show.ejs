@@ -1,0 +1,78 @@
+
+
+
+
+
+<%- include('partials/header')%>
+<div class="container-fluid" style="padding-bottom: 50px ;">
+ 
+   <div class="row">
+      <div class="col-lg-3" >  
+         <div>
+         <div class="col-12" >
+         <H1>Yelp Camp</H1>
+         <ul class="listInfo">
+             <a style="width: 100%;display: block;" href="#">Info 1</a> 
+             <a style="width: 100%; display: block;" href="#">Info 2</a> 
+             <a style="width: 100%;display: block;" href="#">Info 3</a> 
+            
+                    
+         </ul>
+         </div>
+         </div>
+      </div>
+
+<div class="container-fluid col-lg-9 " >
+   <div id="showContent">
+   <div class="row">
+    <div class="col-sm-12"> 
+   <div class="card showCamp"style="box-sizing:border-box">
+       <img  class="card-img-top" style ="width:100%;"src="<%= data.image %>" alt="">
+       <div class="card-body">
+         <h6 class="card-title"><%= data.name %></h6>
+         <p class="card-text"><%= data.desc %></p>
+         <em> Created by <%= data.author.username %> </em>
+
+        <% if(currentUser && currentUser._id.equals(data.author.id)) { %>
+        <h5>$<%= data.price %>/per night</h5>
+         <form action="/campgrounds/<%= data._id %>?_method=DELETE" method="POST">
+            <a class="btn btn-primary btn-sm" style="width: 80px; display:inline-block" href="/campgrounds/<%= data._id %>/edit">Edit</a>
+         <input class= "btn btn-danger btn-sm " style="width: 80px; display: inline-block" type="submit" value="Delete">
+    </form>
+     <% } %>
+       </div>
+     </div>
+   </div>
+   
+</div>
+
+ <div class="container-fluid col-12" >
+   <div class="row pt-2 justify-content-end m-2 " style="display: flex;">     
+         <a class="btn btn-primary col-2 "
+          href="/campgrounds/<%= data._id %>/comments/new">new comment</a>
+     
+   </div>
+
+   
+     <% for(var i=0; i<data.comments.length;i++) { %>
+   <p><strong><%= data.comments[i].author.username %></strong></p>
+    <p><%= data.comments[i].text %></p>
+
+    
+  <% if(currentUser && currentUser._id.equals(data.comments[i].author.id)) { %>
+
+  
+    <form action="/campgrounds/<%= data._id %>/comments/<%= data.comments[i]._id %>?_method=DELETE" method="POST"> 
+      <a class="btn btn-primary btn-sm" style="width: 80px; display:inline-block" href="/campgrounds/<%= data._id %>/comments/<%= data.comments[i]._id %>/edit">Edit</a>
+   <input class= "btn btn-danger btn-sm" style="width: 80px; display: inline-block" type="submit" value="Delete">
+</form>  
+<% } %>
+    <% } %>
+
+</div>
+</div> 
+</div>
+</div>
+</div>
+<%- include('partials/footer')%>
+

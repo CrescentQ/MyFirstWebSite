@@ -1,0 +1,25 @@
+
+
+
+
+<%- include('partials/header')%>
+
+<div class="container-fluid" id="newCamp">
+
+    <form action="/campgrounds/<%=foundedCamp._id %>/comments/<%= foundedComment._id %>?_method=PUT" method="POST">
+    <div class="form-group">
+    <small  class="form-text text-muted"> Author of the comment</small>
+    <input type="text" class="form-control" name = "author" value="<%= foundedComment.author.username %>">
+      
+    </div>
+   
+    <div class="form-group">
+        <small  class="form-text text-muted">Give me some comment here </small>
+        <textarea name = "text" class="form-control" style="min-height:200px ;"><%= foundedComment.text %></textarea>     
+     
+    </div>
+    <input type="submit" class="btn btn-primary btn-block" style="width: 30%; margin:auto"  value="Edit">
+  </form>
+
+
+<%- include('partials/footer')%>

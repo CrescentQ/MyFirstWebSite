@@ -1,0 +1,28 @@
+
+
+
+
+    
+        
+        
+    
+
+
+
+
+<%- include('partials/header')%>
+
+<div class="container-fluid" id="newCamp">
+
+    <form action="/campgrounds/<%= data %>/comments" method="POST">
+       <div class="form-group">
+        <small  class="form-text text-muted">Give me some comment here </small>
+        <textarea name = "text" class="form-control" style="min-height:200px ;"></textarea>
+       
+     
+    </div>
+    <input type="submit" class="btn btn-primary btn-block" style="width: 30%; margin:auto"  value="Create">
+  </form>
+
+
+<%- include('partials/footer')%>
