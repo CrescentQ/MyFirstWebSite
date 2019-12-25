@@ -36,8 +36,8 @@
         <% if(currentUser && currentUser._id.equals(data.author.id)) { %>
         <h5>$<%= data.price %>/per night</h5>
          <form action="/campgrounds/<%= data._id %>?_method=DELETE" method="POST">
-            <a class="btn btn-primary btn-sm" style="width: 80px; display:inline-block" href="/campgrounds/<%= data._id %>/edit">Edit</a>
-         <input class= "btn btn-danger btn-sm " style="width: 80px; display: inline-block" type="submit" value="Delete">
+            <a class="btn btn-primary btn-sm" style="min-width: 80px; display:inline-block" href="/campgrounds/<%= data._id %>/edit">Edit</a>
+         <input class= "btn btn-danger btn-sm " style="min-width: 80px; display: inline-block" type="submit" value="Delete">
     </form>
      <% } %>
        </div>
@@ -48,8 +48,8 @@
 
  <div class="container-fluid col-12" >
    <div class="row pt-2 justify-content-end m-2 " style="display: flex;">     
-         <a class="btn btn-primary col-2 "
-          href="/campgrounds/<%= data._id %>/comments/new">new comment</a>
+         <a class="btn btn-primary col-sm-2 "
+          href="/campgrounds/<%= data._id %>/comments/new" style="min-width: 100px;">new comment</a>
      
    </div>
 
@@ -64,7 +64,7 @@
   
     <form action="/campgrounds/<%= data._id %>/comments/<%= data.comments[i]._id %>?_method=DELETE" method="POST"> 
       <a class="btn btn-primary btn-sm" style="width: 80px; display:inline-block" href="/campgrounds/<%= data._id %>/comments/<%= data.comments[i]._id %>/edit">Edit</a>
-   <input class= "btn btn-danger btn-sm" style="width: 80px; display: inline-block" type="submit" value="Delete">
+   <input class= "btn btn-danger btn-sm" style="min-width: 80px; display: inline-block" type="submit" value="Delete">
 </form>  
 <% } %>
     <% } %>
