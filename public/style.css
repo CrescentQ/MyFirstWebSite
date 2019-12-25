@@ -69,10 +69,12 @@ text-align: center;
     box-sizing: border-box;
      }
 
-     #showContent{
-         margin-right: 40px;
-     }
 
 p{
     margin: 1px;
+}
+
+.main-contain{
+    padding: 0;
+    margin: 0;
 }
