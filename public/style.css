@@ -80,6 +80,10 @@ p{
         margin: auto;
         padding-top: 20vh;
     }
+    *{
+        padding:0;
+        margin: 0;
+    }
   }
 
 
