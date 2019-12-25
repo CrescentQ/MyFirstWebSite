@@ -13,16 +13,16 @@
 <%- include('partials/header')%>
 
 <div class="container-fluid" id="newCamp">
-
+  <div class="row">
+    <div class="col-sm-9">
     <form action="/campgrounds/<%= data %>/comments" method="POST">
        <div class="form-group">
-        <small  class="form-text text-muted">Give me some comment here </small>
-        <textarea name = "text" class="form-control" style="min-height:200px ;"></textarea>
-       
-     
-    </div>
+        <small  class="form-text text-muted">Give me some comment here </small><br>
+        <textarea name = "text" class="form-control" style="min-height:200px ;"></textarea>     
+    </div><br>
     <input type="submit" class="btn btn-primary btn-block" style="width: 30%; margin:auto"  value="Create">
   </form>
-
+</div>
+</div>
 
 <%- include('partials/footer')%>
