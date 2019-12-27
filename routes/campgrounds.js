@@ -4,6 +4,7 @@ var router = express.Router();
 var Campground = require("../models/campgrounds");
 var index = require("./index");
 var middleware = require("../middleware/index");
+var weather = require("../models/weather");
 
 
 
@@ -14,7 +15,13 @@ router.get("/campgrounds", function(req, res){
             if(err){
                 console.log("oops something bad happend, added not successful");
             }else  {
-                     res.render("campgrounds", {campground: allCamgrounds});
+                weather.findWeather("Ho Chi Minh",function(data){
+                             console.log(data)
+                            res.render("campgrounds", {campground: allCamgrounds, data:data});
+                        
+                    
+                });
+                
             }
         }
         );

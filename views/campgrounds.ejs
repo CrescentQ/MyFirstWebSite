@@ -4,10 +4,11 @@
 <div class="jumbotron ">
     <h1 class="display-4"><strong>Welcome To My First Website!</strong></h1>     
     <h4>Dont take it seriously please! I haven't finished yet!</h4> 
-    <a class="btn btn-primary" href="/campgrounds/new">Add New Post</a>    
+    <small> Current Ho Chi Minh's Temperature is <%= data %>  Celsious</small>  <br>
+    <a class="btn btn-primary" href="/campgrounds/new">Add New Post</a>  
+   
     
   </div>
-
  
 <div class="container-fluid" id="allCamp">
     <div class="row justify-conten-center">
@@ -25,4 +26,3 @@
     <% } %>    
 </div>
 </div>
-<%- include('partials/footer')%>
